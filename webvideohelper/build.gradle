@@ -1,17 +1,26 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
     namespace 'com.ezt1.webvideohelper'
-    compileSdk 36
+    compileSdkVersion 36
 
     defaultConfig {
-        minSdk 24
+
+        versionCode 1
+        versionName "0.0.1-nightly-alpha"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
     }
 
     buildTypes {
@@ -40,4 +49,18 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.17.2'
 
 
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+
+                groupId = "com.kingbruno"
+                artifactId = "videoparser"
+                version = "0.0.1-nightly-alpha"
+            }
+        }
+    }
 }
