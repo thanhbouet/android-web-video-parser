@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Screen</title>
+    <style>
+        body {
+            font-family: -apple-system, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 cột */
+            gap: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .site-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            background: white;
+            padding: 15px 5px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .site-card:active {
+            transform: scale(0.9);
+            background-color: #eee;
+        }
+
+        .site-card img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        .site-card span {
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="site-card" onclick="openSite('https://www.facebook.com')">
+        <img src="ic_facebook.png" alt="FB">
+        <span>Facebook</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.instagram.com')">
+        <img src="ic_instagram.png" alt="IG">
+        <span>Instagram</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.x.com')">
+        <img src="ic_x.png" alt="X">
+        <span>X (Twitter)</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.tiktok.com')">
+        <img src="ic_tiktok.png" alt="TT">
+        <span>TikTok</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.vimeo.com')">
+        <img src="ic_vimeo.png" alt="VM">
+        <span>Vimeo</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.dailymotion.com')">
+        <img src="ic_dailymotion.png" alt="DM">
+        <span>Dailymotion</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.imdb.com')">
+        <img src="ic_imdb.png" alt="IMDB">
+        <span>IMDB</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.vk.com')">
+        <img src="ic_vk.png" alt="VK">
+        <span>VK</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.naver.com')">
+        <img src="ic_naver.png" alt="NV">
+        <span>Naver</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.pinterest.com')">
+        <img src="ic_pinterest.png" alt="PT">
+        <span>Pinterest</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.reddit.com')">
+        <img src="ic_reddit.png" alt="RD">
+        <span>Reddit</span>
+    </div>
+
+    <div class="site-card" onclick="openSite('https://www.ted.com')">
+        <img src="ic_ted.png" alt="TED">
+        <span>TED</span>
+    </div>
+</div>
+
+<script>
+    function openSite(url) {
+        // Sử dụng JS tĩnh để chuyển hướng trực tiếp
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>

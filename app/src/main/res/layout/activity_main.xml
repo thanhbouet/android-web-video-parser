@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f1117">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1a1d27"
+        app:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxStrokeColor="#2a2d3a"
+                app:boxBackgroundColor="#0f1117"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="https://..."
+                    android:inputType="textUri"
+                    android:imeOptions="actionGo"
+                    android:singleLine="true"
+                    android:textColor="#e2e8f0"
+                    android:textColorHint="#64748b"
+                    android:textSize="12sp"
+                    android:fontFamily="monospace"
+                    android:paddingVertical="10dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginStart="6dp"
+                android:text="GO"
+                android:textSize="11sp"
+                app:backgroundTint="#00e5ff"
+                android:textColor="#0f1117"
+                app:cornerRadius="6dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCookie"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="4dp"
+                android:text="&#127850;"
+                android:textSize="15sp"
+                android:padding="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:backgroundTint="#2a2d3a"
+                app:cornerRadius="6dp"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:visibility="gone"
+            app:indicatorColor="#00e5ff"
+            app:trackColor="#2a2d3a"
+            app:trackThickness="2dp"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#1a1d27"
+            app:tabTextColor="#64748b"
+            app:tabSelectedTextColor="#00e5ff"
+            app:tabIndicatorColor="#00e5ff"
+            app:tabIndicatorHeight="2dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@style/TextAppearance.Tab"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnExtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="EXTRACT"
+        android:textColor="#0f1117"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_extract"
+        app:iconTint="#0f1117"
+        app:backgroundTint="#00e5ff"
+        android:enabled="false"/>
+
+    <TextView
+        android:id="@+id/tvWebStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="14dp"
+        android:textSize="10sp"
+        android:textColor="#64748b"
+        android:fontFamily="monospace"
+        android:maxWidth="260dp"
+        android:maxLines="1"
+        android:ellipsize="middle"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

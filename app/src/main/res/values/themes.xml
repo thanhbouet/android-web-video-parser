@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.VideoDownloader" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#00e5ff</item>
+        <item name="colorPrimaryVariant">#0097a7</item>
+        <item name="colorOnPrimary">#0f1117</item>
+        <item name="colorSurface">#1a1d27</item>
+        <item name="colorOnSurface">#e2e8f0</item>
+        <item name="android:windowBackground">#0f1117</item>
+        <item name="android:statusBarColor">#1a1d27</item>
+        <item name="android:navigationBarColor">#1a1d27</item>
+    </style>
+
+    <style name="TextAppearance.Tab" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

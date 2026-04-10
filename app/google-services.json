@@ -1,0 +1,34 @@
+{
+  "project_info": {
+    "project_number": "963639937165",
+    "project_id": "ace-downloader",
+    "storage_bucket": "ace-downloader.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963639937165:android:3b60b56cff139fcd9fbac4",
+        "android_client_info": {
+          "package_name": "videoplayer.videodownloader.downloader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963639937165-50ev0jfinfk2akj92189vesb8ja1qlls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6aTxivy6BgIka3JJnvp7kByURcuZhNY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

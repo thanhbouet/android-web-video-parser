@@ -1,0 +1,25 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+    }
+}
+
+rootProject.name = "VideoDownloader"
+include ':app'
+include ':webvideohelper'
