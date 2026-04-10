@@ -10,8 +10,8 @@ android {
 
     defaultConfig {
 
-        versionCode 1
-        versionName "0.0.1-nightly-alpha"
+        versionCode 2
+        versionName "0.0.2-nightly-alpha"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -59,7 +59,7 @@ afterEvaluate {
 
                 groupId = "com.kingbruno"
                 artifactId = "videoparser"
-                version = "0.0.1-nightly-alpha"
+                version = "0.0.2-nightly-alpha"
             }
         }
     }
